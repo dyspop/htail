@@ -2,8 +2,8 @@ require 'httparty'
 require 'nokogiri'
 require 'twilio-ruby'
 
-account_sid = ''
-auth_token = ''
+account_sid = 'AC9c158c2a5577f0a696a9f4e8726f5f97'
+auth_token = '1b698b64546a2d127314083126221a6c'
 
 # set up a client to talk to the Twilio REST API
 @client = Twilio::REST::Client.new account_sid, auth_token
