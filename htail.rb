@@ -23,12 +23,9 @@ loop do
 		links_origin = get_links(site_origin)
 		links_now = get_links(site_now)
 		for link in links_now
-			if links_origin.include? link
-				puts "old link: " + link.to_s
-			else
-				puts "NEW LINK: " + link.to_s
-			end
+			puts ("NEW LINK: " + link.to_s) if !(links_origin.include? link)
 		end
+		site_origin = site_now
 	else
 		puts "no change..."
 	end
