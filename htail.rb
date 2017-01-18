@@ -1,5 +1,4 @@
 require 'httparty'
-require 'diffy'
 require 'nokogiri'
 
 site = ARGV[0]
