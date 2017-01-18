@@ -24,7 +24,7 @@ loop do
 	elsif site_now.to_s != site_origin.to_s
 		diff = Diffy::Diff.new(site_origin, site_now).to_s(:html)
 		puts get_links(site)
-		#site_origin = site
+		site_origin = site_now
 	else
 		puts "no change..."
 	end
