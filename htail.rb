@@ -31,7 +31,7 @@ loop do
 			end
 		end
 		links = links.to_s
-		(`echo "#{links}" | mail -s "#{site} update at #{now}" #{recipient}`) if links != '[]'
+		(`echo "#{links}" | mailx -s "#{site} update at #{now}" #{recipient}`) if links != '[]'
 		site_origin = site_now
 	end
 end
