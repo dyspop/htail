@@ -1,5 +1,5 @@
 # htail
-tail http changes via email
+tail http changes for new links, send response via email
 
 # usage
 
