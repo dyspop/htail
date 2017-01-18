@@ -21,7 +21,8 @@ loop do
 	links = []
 	if site_now.to_s != site_origin.to_s
 		now = (Time.now).to_s
-		puts "CHANGE FOUND at " + now
+		message = "CHANGE FOUND at " + now
+		puts message
 		links_origin = get_links(site_origin)
 		links_now = get_links(site_now)
 		for link in links_now
@@ -33,7 +34,5 @@ loop do
 		links = links.to_s
 		(`echo "#{links}" | mail -s "#{site} update at #{now}" #{recipient}`) if links != '[]'
 		site_origin = site_now
-	else
-		puts "no change..."
 	end
 end
