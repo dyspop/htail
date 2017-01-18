@@ -22,8 +22,10 @@ loop do
 	if Time.now < now + counter
 		next
 	elsif site_now.to_s != site_origin.to_s
-		diff = Diffy::Diff.new(site_origin, site_now).to_s(:html)
-		puts get_links(site)
+		puts "CHANGE FOUND"
+		links_origin = get_links(site_origin)
+		links_now = get_links(site_now)
+		diff = Diffy::Diff.new(links_origin, links_now)
 		site_origin = site_now
 	else
 		puts "no change..."
