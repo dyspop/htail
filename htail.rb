@@ -1,6 +1,9 @@
 require 'httparty'
 require 'nokogiri'
+require 'vero'
 
+vero_api_key = "271a53799946eaaf0bda90818340f7d384bad30c"
+vero_secret = "52d671bbb742678eb3dafc53bee96a7dfcbae396"
 site = ARGV[0]
 recipient = ARGV[1]
 now = Time.now
